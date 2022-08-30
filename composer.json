@@ -1,0 +1,35 @@
+{
+    "name": "skyrim/wp-custom",
+    "autoload": {
+        "psr-4": {
+            "Skyrim\\WpCustom\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "P-axel",
+            "email": "pa.sg@outlook.com"
+        }
+    ],
+    "extra": {
+        "wordpress-install-dir": "wp"
+    },
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org",
+            "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "^5.5",
+        "wpackagist-theme/twentytwenty": "^1.5",
+        "wpackagist-plugin/akismet": "^4.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "johnpbloch/wordpress-core-installer": true,
+            "composer/installers": true
+        }
+    }
+}
